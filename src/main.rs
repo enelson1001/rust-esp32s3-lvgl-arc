@@ -145,8 +145,7 @@ fn main() -> anyhow::Result<(), anyhow::Error> {
     };
 
     info!("=============  Registering Touchscreen ====================");
-    let _touch_screen =
-        Pointer::register(read_touchscreen_cb, &display).map_err(Error::msg)?;
+    let _touch_screen = Pointer::register(read_touchscreen_cb, &display).map_err(Error::msg)?;
 
     //=======================================================================================================
     //                               Create the User Interface
